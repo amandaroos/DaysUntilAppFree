@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Days Until</string>
-    <string name="preference_file_key">preferencefilekey</string>
-    <string name="date_key">datekey</string>
+    <string name="preference_file_key" translatable="false">preferencefilekey</string>
+    <string name="date_key" translatable="false">datekey</string>
     <string name="hours">Hours</string>
     <string name="minutes">Minutes</string>
     <string name="seconds">Seconds</string>
@@ -11,4 +11,30 @@
     <string name="hour">Hour</string>
     <string name="minute">Minute</string>
     <string name="second">Second</string>
+    <string name="settings">Settings</string>
+    <string name="donate">Donate</string>
+    <string name="upgrade">Upgrade</string>
+    <string name="rate">Rate</string>
+
+    <!--Donation page-->
+    <string name="action_donate">Donate to Developer</string>
+    <string name="donate_greeting">Hello!</string>
+    <string name="donate_message">My name is Amanda.</string>
+    <string name="donate_message2"> If you are enjoying this app I developed, please consider purchasing my donation app.</string>
+    <string name="donate_message3"> The donation app does not do anything, but your donation will show me that my time spent developing simple, no-ads apps is appreciated.</string>
+    <string name="donate_thanks"> Thanks!</string>
+    <string name="play_store_direct_link_blue" translatable="false">market://details?id=com.amandafarrell.www.donationfordeveloper_blue</string>
+    <string name="play_store_browser_link_blue" translatable="false">https://play.google.com/store/apps/details?id=com.amandafarrell.www.donationfordeveloper_blue</string>
+    <string name="play_store_direct_link_red" translatable="false">market://details?id=com.amandafarrell.www.donationfordeveloperred</string>
+    <string name="play_store_browser_link_red" translatable="false">https://play.google.com/store/apps/details?id=com.amandafarrell.www.donationfordeveloperred</string>
+    <string name="play_store_direct_link_black" translatable="false">market://details?id=com.amandafarrell.www.donationfordeveloperblack</string>
+    <string name="play_store_browser_link_black" translatable="false">https://play.google.com/store/apps/details?id=com.amandafarrell.www.donationfordeveloperblack</string>
+    <string name="small">Small</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="play_store_browser_link_upgrade" translatable="false">https://play.google.com/store/apps/details?id=com.amandafarrell.www.changecalculatorpaid</string>
+    <string name="play_store_direct_link_upgrade" translatable="false">market://details?id=com.amandafarrell.www.changecalculatorpaid</string>
+    <string name="small_heart">small heart</string>
+    <string name="medium_heart">medium heart</string>
+    <string name="large_heart">large heart</string>
 </resources>

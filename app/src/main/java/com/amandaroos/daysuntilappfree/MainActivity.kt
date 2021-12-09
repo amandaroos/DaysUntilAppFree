@@ -1,9 +1,15 @@
 package com.amandaroos.daysuntilappfree
 
+import android.content.ActivityNotFoundException
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.format.DateFormat
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -111,22 +117,38 @@ class MainActivity : AppCompatActivity() {
         newFragment.show(supportFragmentManager, "datePicker")
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-//        val inflater: MenuInflater = menuInflater
-//        inflater.inflate(R.menu.main_menu, menu)
-//        return true
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return when (item.itemId) {
-//            R.id.action_settings -> {
-//                val intent = Intent(this, SettingsActivity::class.java).apply {
-//                    //putExtra(getString(R.string.context_key),this@MainActivity)
-//                }
-//                startActivity(intent)
-//                true
-//            }
-//            else -> super.onOptionsItemSelected(item)
-//        }
-//    }
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.main_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_upgrade -> {
+                try {
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(getString(R.string.play_store_direct_link_upgrade))
+                        )
+                    )
+                } catch (anfe: ActivityNotFoundException) {
+                    startActivity(
+                        Intent(
+                            Intent.ACTION_VIEW,
+                            Uri.parse(getString(R.string.play_store_browser_link_upgrade))
+                        )
+                    )
+                }
+                true
+            }
+            R.id.action_donate ->{
+                val intent2 = Intent(this, DonateActivity::class.java)
+                startActivity(intent2)
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 }
