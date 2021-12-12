@@ -14,7 +14,7 @@ class DonateActivity : AppCompatActivity() {
         setContentView(R.layout.activity_donate)
     }
 
-    fun goToBlueLink(view: View?) {
+    fun goToBlueLink(view: View) {
         try {
             startActivity(
                 Intent(
@@ -32,7 +32,7 @@ class DonateActivity : AppCompatActivity() {
         }
     }
 
-    fun goToRedLink(view: View?) {
+    fun goToRedLink(view: View) {
         try {
             startActivity(
                 Intent(
@@ -50,7 +50,7 @@ class DonateActivity : AppCompatActivity() {
         }
     }
 
-    fun goToBlackLink(view: View?) {
+    fun goToBlackLink(view: View) {
         try {
             startActivity(
                 Intent(
